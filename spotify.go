@@ -201,7 +201,7 @@ func retryDuration(resp *http.Response) time.Duration {
 	return time.Duration(seconds) * time.Second
 }
 
-func (c *Client) get(url string, result interface{}) error {
+func (c *Client) Get(url string, result interface{}) error {
 	for {
 		resp, err := c.http.Get(url)
 		if err != nil {
